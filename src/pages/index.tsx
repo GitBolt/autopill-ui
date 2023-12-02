@@ -33,7 +33,7 @@ const HomePage = () => {
 
   return (
     <Flex direction="column" align="center" m={8}>
-      <Heading mb={6}>Medication Management</Heading>
+      <Heading mb={6}>AutoPill</Heading>
 
       {medication ? <MedicationList
         medication={medication}

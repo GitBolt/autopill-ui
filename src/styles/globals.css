@@ -1,5 +1,5 @@
 .testPicker {
-  background-color: #f2f2f7; /* A light grey typical of iOS backgrounds */
+  background-color: white !important;
   border-radius: 12px; /* Rounded corners for a softer look */
   color: #1c1c1e; /* Dark color for text for better readability */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* iOS system font */
@@ -8,6 +8,14 @@
   width: 100%;
   color: #687393;
   font-weight: 700;
+
+}
+
+.react-time-picker__inputGroup__input:invalid {
+  background-color: #fcfcff !important;
+}
+.react-time-picker__inputGroup > input {
+  width: 30px !important;
 }
 
 .react-time-picker__clock {

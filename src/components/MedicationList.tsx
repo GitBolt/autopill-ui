@@ -21,7 +21,7 @@ const MedicationList: React.FC<MedicationListProps> = ({ medication, onEdit, onD
   }
 
   return (
-    <Box bg={bgColor} p={4} borderRadius="lg" shadow={shadow} maxW="sm" mx="auto">
+    <Box bg={bgColor} p={4} borderRadius="lg" shadow={shadow} w="300px">
       <VStack spacing={3} align="stretch">
         <Text fontSize="lg" fontWeight="bold" textAlign="center">Medication: {medication.name}</Text>
         {medication.times.map((time, index) => (
