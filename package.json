@@ -23,12 +23,14 @@
     "react-datepicker": "^4.24.0",
     "react-datetime-picker": "^5.5.3",
     "react-dom": "^18",
-    "react-time-picker": "^6.5.2"
+    "react-time-picker": "^6.5.2",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/uuid": "^9.0.7",
     "typescript": "^5"
   }
 }

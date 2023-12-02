@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Medication } from '@/types';
 
-const API_URL = 'http://46.250.226.112:5000/api/medications';
+const API_URL = '/api/medications';
 
 export const getMedication = async (): Promise<Medication | null> => {
   try {
