@@ -23,7 +23,8 @@ const MedicationList: React.FC<MedicationListProps> = ({ medication, onEdit, onD
   return (
     <Box bg={bgColor} p={4} borderRadius="lg" shadow={shadow} w="300px">
       <VStack spacing={3} align="stretch">
-        <Text fontSize="lg" fontWeight="bold" textAlign="center">Medication: {medication.name}</Text>
+        <Text fontSize="40px" fontWeight="bold" textAlign="center">{medication.name}</Text>
+        <Text fontSize="lg" textAlign="center">Consumed <span style={{fontWeight:"800"}}>{medication.counter}</span> Times</Text>
         {medication.times.map((time, index) => (
           <HStack key={index} justify="space-between" p={2} bg="gray.100" borderRadius="md">
             <Text fontSize="md">Time {index + 1}</Text>

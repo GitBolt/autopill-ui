@@ -8,6 +8,21 @@ import { addMedication, deleteMedication, getMedication, updateMedication } from
 const HomePage = () => {
   const [medication, setMedication] = useState<Medication | null>(null);
 
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        fetchMedication()
+      } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+      }
+    };
+    const intervalId = setInterval(fetchData, 800);
+    return () => clearInterval(intervalId);
+  }, []);
+
+
   const fetchMedication = async () => {
     const fetchedMedication = await getMedication();
     setMedication(fetchedMedication);
@@ -42,6 +57,7 @@ const HomePage = () => {
       /> : <MedicationForm onSave={handleSave} />
       }
 
+    <Flex>Built By <a href="https://aabis.dev" style={{color:"blue", textDecoration:"underline", margin:"0 5px"}}> Aabis </a> and Rohan</Flex>
     </Flex>
   );
 };

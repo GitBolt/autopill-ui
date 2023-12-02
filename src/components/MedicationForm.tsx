@@ -64,7 +64,7 @@ const MedicationForm: React.FC<MedicationFormProps> = ({ onSave }) => {
       <FormLabel fontSize="20px">Add New Medical Pill Time</FormLabel>
       <Input
         value={medication.name}
-        placeholder='Enter name'
+        placeholder='Enter pill name'
         onChange={(e) => setMedication({ ...medication, name: e.target.value })}
       />
 
