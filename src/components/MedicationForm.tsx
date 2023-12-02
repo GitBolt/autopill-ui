@@ -27,18 +27,28 @@ const MedicationForm: React.FC<MedicationFormProps> = ({ onSave }) => {
 
   const handleTimeChange = (index: number, timeString: string | null) => {
     const newTimes = [...medication.times];
-
+  
     if (timeString) {
       const [hours, minutes] = timeString.split(':').map(Number);
       const dateTime = new Date();
       dateTime.setHours(hours, minutes, 0, 0);
-      newTimes[index] = dateTime.toISOString();
+  
+      const localISOTime = dateTime.getFullYear() + '-' +
+                           String(dateTime.getMonth() + 1).padStart(2, '0') + '-' +
+                           String(dateTime.getDate()).padStart(2, '0') + 'T' +
+                           String(dateTime.getHours()).padStart(2, '0') + ':' +
+                           String(dateTime.getMinutes()).padStart(2, '0') + ':' +
+                           String(dateTime.getSeconds()).padStart(2, '0');
+  
+      newTimes[index] = localISOTime;
+      console.log(localISOTime)
     } else {
       newTimes[index] = '';
     }
+  
     setMedication({ ...medication, times: newTimes });
   };
-
+  
 
   const addTimeInput = () => {
     if (medication.times.length < 5) {
