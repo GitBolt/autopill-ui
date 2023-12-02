@@ -31,7 +31,7 @@ const MedicationList: React.FC<MedicationListProps> = ({ medication, onEdit, onD
           </HStack>
         ))}
         <HStack spacing={2} mt={4} justify="center">
-          <Button colorScheme="red" onClick={() => onDelete(medication._id)}>Delete</Button>
+          <Button colorScheme="red" onClick={() => onDelete(medication!._id!)}>Delete</Button>
         </HStack>
       </VStack>
     </Box>
