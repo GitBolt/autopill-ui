@@ -202,7 +202,7 @@ The backend server stores your medication data and communicates with the hardwar
    - The server should start and listen on `http://localhost:5000`.
 
 ## Logic Flow
-[](https://media.discordapp.net/attachments/865444983762452520/1288873965661585553/image.png?ex=66f6c4eb&is=66f5736b&hm=d1be06b0384dd3249d2123f5f9f773f767ae8f7c16d1283cb744ebb3c815ac13&=&width=1986&height=860)
+![Flow](https://media.discordapp.net/attachments/865444983762452520/1288873965661585553/image.png?ex=66f6c4eb&is=66f5736b&hm=d1be06b0384dd3249d2123f5f9f773f767ae8f7c16d1283cb744ebb3c815ac13&=&width=1986&height=860)
 
 ## Setting Up the Hardware
 
